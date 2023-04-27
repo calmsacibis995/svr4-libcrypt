@@ -79,15 +79,8 @@ all : ALL
 
 install: ALL
 	$(INS) -f $(USRLIB) -m 644 $(LIBRARY_I) ;\
-	if [ -s des_decrypt.c ] ;\
-	then \
-		$(INS) -f $(USRLIB) -m 644 $(LIBRARY_D) ;\
-		rm -f $(USRLIB)/$(LIBRARY) ;\
-		ln -f $(USRLIB)/$(LIBRARY_D) $(USRLIB)/$(LIBRARY) ;\
-	else \
-		rm -f $(USRLIB)/$(LIBRARY) ;\
-		ln -f $(USRLIB)/$(LIBRARY_I) $(USRLIB)/$(LIBRARY) ;\
-	fi
+	$(INS) -f $(USRLIB) -m 644 $(LIBRARY_D) ;\
+	ln -f $(USRLIB)/$(LIBRARY_D) $(USRLIB)/$(LIBRARY) ;\
 
 lintit:	
 	$(LINT) $(LINTFLAGS) *.c
