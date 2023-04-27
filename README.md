@@ -5,4 +5,4 @@ The encryption library of UNIX System V Release 4.0
 You will need `gcc` and `make`. Clone this repository, and then run `make`.
 
 # Installing
-Run `make install`. It installs to /usr/local/lib.
+Run `make install`. It installs to `/usr/local/lib`.
