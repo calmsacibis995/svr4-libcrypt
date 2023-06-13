@@ -158,7 +158,7 @@ makekey(int b[2])
 }
 
 int
-crypt_close(p[2])
+crypt_close(int p[2])
 {
 	pid_t pid;
 	int ret;
