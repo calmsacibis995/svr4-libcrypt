@@ -18,6 +18,7 @@
 
 #include "synonyms.h"
 #include <stdio.h>
+#include <string.h>
 #include <signal.h>
 #include <fcntl.h>
 #include <errno.h>
@@ -43,7 +44,6 @@ extern uid_t getuid();
 extern gid_t getgid(); 
 extern int read(), write();
 extern int kill();
-extern char *strncpy();
 extern int	close(),
 		execl(),
 		pipe();
