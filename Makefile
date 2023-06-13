@@ -36,17 +36,9 @@ $(LIBRARY_I)(crypt.o):	 synonyms.h
 
 $(LIBRARY_D)(crypt.o):	 synonyms.h
 
-$(LIBRARY_I)(cryptio.o):	 $(INC)/stdio.h \
-		 $(INC)/signal.h	\
-		 $(INC)/sys/signal.h \
-		 $(INC)/fcntl.h \
-		 $(INC)/sys/fcntl.h synonyms.h
+$(LIBRARY_I)(cryptio.o):
 
-$(LIBRARY_D)(cryptio.o):	 $(INC)/stdio.h \
-		 $(INC)/signal.h	\
-		 $(INC)/sys/signal.h  \
-		 $(INC)/fcntl.h \
-		 $(INC)/sys/fcntl.h synonyms.h
+$(LIBRARY_D)(cryptio.o):
 
 $(LIBRARY_D)(des_decrypt.o):	 synonyms.h
 
