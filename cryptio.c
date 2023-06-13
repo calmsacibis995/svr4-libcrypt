@@ -33,7 +33,7 @@ static char key[KSIZE+1];
 static struct header {
 	long offset;
 	unsigned int count;
-};
+} header;
 
 static int cryptopen();
 static int writekey();
@@ -134,8 +134,8 @@ int p[2];
 	return(0);
 }
 
-makekey(b)
-int b[2];
+int
+makekey(int b[2])
 {
 	register int i;
 	long gorp;
@@ -157,9 +157,8 @@ int b[2];
 	return(0);
 }
 
-
-crypt_close(p)
-int p[2];
+int
+crypt_close(p[2])
 {
 	pid_t pid;
 	int ret;
